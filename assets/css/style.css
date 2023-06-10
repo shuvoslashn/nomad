@@ -1,0 +1,324 @@
+/*      Google Font
+-----------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@400;500;600;700;800&display=swap');
+
+/*      General CSS
+-----------------------------------------------*/
+:root {
+    --dark: #101010;
+    --primary: #ea4335;
+    --shadow: #ea44358e;
+    --white: #ffffff;
+    --gray: #a5a5a5;
+    --font: 'Pathway Extreme', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    color: var(--gray);
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--dark);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 170%;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+a:hover {
+    color: var(--white);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white);
+    font-weight: 800;
+    line-height: 110%;
+}
+h1 {
+    font-size: 64px;
+}
+h2 {
+    font-size: 48px;
+    padding-bottom: 16px;
+}
+h3 {
+    font-size: 36px;
+}
+h4 {
+    font-size: 24px;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+.btn {
+    font-weight: 600;
+    padding: 12px 32px 15px;
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0px 10px 30px -5px var(--shadow);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.btn.small {
+    padding: 4px 18px 6px !important;
+}
+.btn:hover {
+    opacity: 0.6;
+}
+.color {
+    color: var(--primary);
+}
+
+/*      Header css start
+-----------------------------------------------*/
+.header-area {
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    background-color: #10101080;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+.header-area .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.menu-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.menu-list li a {
+    font-weight: 600;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+.menu-list li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: var(--white);
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+.menu-list li a:hover::after {
+    width: 60%;
+}
+.right-panel {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.xmark {
+    display: none;
+}
+.bar {
+    display: none;
+}
+.menu.active .menu-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50vh 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.menu.active .xmark {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+/*      Hero Area CSS
+-----------------------------------------------*/
+.hero-area {
+    padding: 150px 0 0;
+    position: relative;
+}
+.hero-area .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-area h1 {
+    padding-bottom: 10px;
+}
+.hero-area p {
+    padding-bottom: 30px;
+}
+.arrow {
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+}
+.blur-shape {
+    position: absolute;
+    top: 0;
+    left: 10vw;
+}
+.all-logos {
+    width: 150%;
+}
+
+/*      about area css
+-----------------------------------------------*/
+.about-area {
+    padding-bottom: 80px;
+}
+.about-area .container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-direction: row;
+}
+.about-left img {
+    width: 900px;
+    margin: 0 auto;
+    display: block;
+}
+.about-para {
+    padding-right: 100px;
+    padding-bottom: 30px;
+}
+.counter {
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-counter {
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+/*      Our services
+-----------------------------------------------*/
+.services .heading {
+    display: flex;
+    gap: 100px;
+    align-items: flex-end;
+}
+.service-cards {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+.card {
+    flex-basis: 30%;
+    flex-grow: 1;
+    padding: 10px;
+    background: #fff1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.card img {
+    width: 100%;
+}
+.card-content {
+    padding: 20px;
+}
+.card-content h3 {
+    font-weight: 600;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+
+/*      Last area css
+-----------------------------------------------*/
+.last-area {
+    padding: 120px 0;
+    background: url('./../img/absa.png');
+    background-size: cover;
+    background-position: 0 -200px;
+}
+.last-area .heading {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+.last-area .last-para {
+    padding-bottom: 40px;
+}
+
+/*      footer area css
+-----------------------------------------------*/
+.footer-top {
+    background-color: #212121;
+    padding: 60px 0;
+}
+.footer-top .container {
+    display: flex;
+}
+.footer {
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+.footer-1 {
+    flex-basis: 40%;
+    padding-right: 150px;
+}
+.footer h3 {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.footer ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+.footer-bottom {
+    padding: 30px;
+    font-size: 14px;
+    background: #27282b;
+    text-align: center;
+}
